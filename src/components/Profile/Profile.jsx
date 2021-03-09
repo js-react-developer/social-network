@@ -4,8 +4,8 @@ import s from './Profile.module.css';
 
 const Profile = () => {
     return (
-        <div className={s.content}>
-            <div className={s.mainBackground}>
+        <div>
+            <div>
                 <img src='https://natworld.info/wp-content/uploads/2020/04/poberezhe-morya-1026x500.jpg' />
             </div>
             <div className={s.avatar}>

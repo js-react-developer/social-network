@@ -7,10 +7,10 @@ const MyPosts = () => {
         <div>
             My posts
             <div className={s.posts}>
-                <Post message="It's my first message" likecounts="10" />
-                <Post message="It's my second message" likecounts="20"/>
-                <Post message="It's my third message" likecounts="30"/>
-                <Post message="It's my fourth message" likecounts="40"/>
+                <Post message="It's my first message" likesCount="10" />
+                <Post message="It's my second message" likesCount="20"/>
+                <Post message="It's my third message" likesCount="30"/>
+                <Post message="It's my fourth message" likesCount="40"/>
             </div>
         </div>
     );

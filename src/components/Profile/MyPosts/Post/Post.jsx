@@ -7,7 +7,7 @@ const Post = (props) => {
             <img src='http://archilab.online/images/1/123.jpg' />
             { props.message }
             <div>
-                { props.likecounts }
+                { props.likesCount } likes
             </div>
         </div>
     );
