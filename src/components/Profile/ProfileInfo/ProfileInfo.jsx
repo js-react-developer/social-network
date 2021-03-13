@@ -5,7 +5,7 @@ const ProfileInfo = (props) => {
     return (
         <div>
             <div className={s.mainBackground}>
-                <img src='https://natworld.info/wp-content/uploads/2020/04/poberezhe-morya-1026x500.jpg' />
+                <img src='https://krot.info/uploads/posts/2021-01/1610169923_10-p-fon-otdikh-51.jpg' />
             </div>
             <div className={s.descriptionBlock}>
                 avatar + description

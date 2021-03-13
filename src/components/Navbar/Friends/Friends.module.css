@@ -1,0 +1,10 @@
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.headline {
+  font-size: 36px;
+  text-align: center;
+}

@@ -1,6 +1,6 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 3fr 10fr;
 }
 
 .dialogsItems {
@@ -18,4 +18,8 @@
 
 .dialog a.active {
     color: #be185d;
+}
+
+.dialog img {
+    width: 30px;
 }
