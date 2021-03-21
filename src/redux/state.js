@@ -28,7 +28,9 @@ let state = {
             { id: 2, message: 'How are you?' },
             { id: 3, message: 'I am fine. How are yo?' },
             { id: 4, message: 'I am good' }
-        ]
+        ],
+
+        newMessageText: 'message'
     },
 
     sidebar: {
@@ -56,8 +58,25 @@ export const updateNewPostText = (newText) => {
     rerenderEntireTree(state);
 }
 
+export const addMessage = () => {
+    let newMessage = {
+        id: 5,
+        message: state.dialogsPage.newMessageText
+    };
+    state.dialogsPage.messages.push(newMessage);
+    state.dialogsPage.newMessageText = '';
+    rerenderEntireTree(state);
+}
+
+export const updateNewMessageText = (newMessage) => {
+    state.dialogsPage.newMessageText = newMessage;
+    rerenderEntireTree(state);
+}
+
 export const subscribe = (observer) => {
     rerenderEntireTree = observer;
 }
+
+window.state = state;
 
 export default state;
