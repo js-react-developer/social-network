@@ -1,34 +1,26 @@
 import React from 'react';
+import AddPostForm from './AddPostForm/AddPostForm';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = (props) => {
 
-    let postsElements = props.posts.map( p => <Post message={p.message} likesCount={p.likesCount} /> );
+    let postsElements = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount} />);
 
-    let onAddPost = () => {
-        props.addPost();
-    };
-
-    let onPostChange = (e) => {
-        let text = e.target.value;
-        props.updateNewPostText(text);
-    };
+    let addNewPost = (formData) => {
+        props.addPost(formData.newPostText)
+    }
 
     return (
         <div className={s.postsBlock}>
             <h3>My posts</h3>
-            <div>
-                <textarea onChange={onPostChange} value={props.newPostText} placeholder='Enter your message'/>
-            </div>
-            <div>
-                <button onClick={onAddPost}>Add post</button>
-            </div>
+            <AddPostForm onSubmit={addNewPost}/>
             <div className={s.posts}>
-                { postsElements }
+                {postsElements}
             </div>
         </div>
     );
 }
+
 
 export default MyPosts;
