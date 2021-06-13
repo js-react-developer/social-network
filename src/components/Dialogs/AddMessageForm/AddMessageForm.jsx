@@ -1,10 +1,16 @@
+import { React } from 'react';
 import { Field, reduxForm } from "redux-form"
+import { required, maxLengthCreator } from './../../../utils/Validators/Validators';
+import { Textarea } from './../../common/FormsControls/FormsControls';
+
+const maxLength50 = maxLengthCreator(50); 
 
 const AddMessageForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
-                <Field placeholder={'Enter your message'} name={'newMessageBody'} component={'textarea'} />
+                <Field placeholder={'Enter your message'} name={'newMessageBody'}
+                       validate={[required, maxLength50]} component={Textarea} />
             </div>
             <div>
                 <button>Send</button>
