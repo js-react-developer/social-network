@@ -8,12 +8,13 @@ const ProfileInfo = (props) => {
         return <Preloader />
     }
     return (
+        // need image for background
         <div>
             <div className={s.mainBackground}>
-                <img src='' />
+                
             </div>
             <div className={s.descriptionBlock}>
-                <img src={props.profile.photos.large} />
+                <img alt='avatar' src={props.profile.photos.large} />
                 <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
             </div>
             <div>
